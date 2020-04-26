@@ -5,7 +5,9 @@ segmentiranje in pretvorbo v priročno obliko. Podrobnosti o posamezni
 podatkovn zbirki se nahajajo znotraj README datotek v mapi za
 posamezno podatkovno zbirko.
 
-Skripta *prepare_datasets* omogoča segmentiranje podatkov upoštevajoč podane parametre.
+Skripta *prepare_datasets* omogoča segmentiranje podatkov upoštevajoč podane parametre. Skripta tudi razdeli podatkovno
+množico na učno in testno. Pri 1. in 2. podatkovni zbirki specificiramo datoteke, za katere želimo, da so v učni množici
+tako, da jih premaknemo iz npr. mape *./data1/* v mapo *./data1/train/*, za uporabo v testni množici pa jih premaknemo v mapo *./data1/test/*.
 Skripta zahteva parameter *--overlap VAL*, s katerim specificiramo prekrivanje med segmenti v obliki deleža
 z intervala [0, 1) in bodisi parameter *--window-len-sec VAL*, s katerim specificiramo dolžino segmenta/okna
 v sekundah, bodisi parameter *--window-len-samp VAL*, s katerim specificiramo dolžino segmenta/okna
